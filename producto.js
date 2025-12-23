@@ -180,16 +180,37 @@ const productos = {
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
-// Actualizar la página con la info del producto
+// Elementos del DOM
+const nombreProducto = document.getElementById("nombre-producto");
+const imagenProducto = document.getElementById("imagen-producto");
+const precioProducto = document.getElementById("precio-producto");
+const descripcionProducto = document.getElementById("descripcion-producto");
+const botonCarrito = document.getElementById("agregar-carrito");
+
+// Mostrar información del producto
 if(id && productos[id]){
-    document.getElementById("nombre-producto").textContent = id;
-    document.getElementById("imagen-producto").src = productos[id].imagen;
-    document.getElementById("imagen-producto").alt = id;
-    document.getElementById("precio-producto").textContent = productos[id].precio;
-    document.getElementById("descripcion-producto").textContent = productos[id].descripcion;
+    nombreProducto.textContent = id;
+    imagenProducto.src = productos[id].imagen;
+    imagenProducto.alt = id;
+    precioProducto.textContent = productos[id].precio;
+    descripcionProducto.textContent = productos[id].descripcion;
 } else {
-    document.getElementById("nombre-producto").textContent = "Producto no encontrado";
-    document.getElementById("descripcion-producto").textContent = "";
-    document.getElementById("precio-producto").textContent = "";
-    document.getElementById("imagen-producto").style.display = "none";
+    nombreProducto.textContent = "Producto no encontrado";
+    descripcionProducto.textContent = "";
+    precioProducto.textContent = "";
+    imagenProducto.style.display = "none";
+    botonCarrito.style.display = "none";
 }
+
+// Agregar al carrito (simple usando localStorage)
+botonCarrito.addEventListener("click", () => {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push({
+        id: id,
+        nombre: nombreProducto.textContent,
+        precio: precioProducto.textContent,
+        imagen: imagenProducto.src
+    });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    alert("Producto agregado al carrito");
+});

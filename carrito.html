@@ -32,16 +32,16 @@
     </header>
 
 
-    <main class="container-form">
-        <h2>Carrito de Compras</h2>
-        <div id="carrito-items">
+   <main class="contenedor">
+        <h1 class="titulo-categoria">Tu Carrito</h1>
+        <div id="carrito-items" class="contenedor productos">
             
-            <div class="carrito-item">
-                
-                
-            </div>
+
         </div>
-        <button class="btn">Finalizar Compra</button>
+        <div class="total">
+            <p>Total: <span id="total"></span></p>
+            <button class="btn" id="checkout">Finalizar Compra</button>
+        </div>
     </main>
 
 
@@ -104,5 +104,7 @@
             <p>&copy2025 ZonaBike. Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <script src="carrito.js"></script>
 </body>
 </html>

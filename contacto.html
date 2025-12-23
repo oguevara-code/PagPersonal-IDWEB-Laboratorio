@@ -31,18 +31,17 @@
         </div>
     </header>
 
-    <main class="contacto-form">
-        <h1>Contáctanos</h1>
-
-        <form id="contactForm" action="/contacto" method="POST">
-            <label for="nombre">Nombre:</label>
+    <main class="contenedor">
+        <h1 class="titulo-categoria">Contáctanos</h1>
+        <form id="contacto-form" action="#" method="POST">
+            <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Correo electrónico:</label>
+            <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
 
             <button type="submit" class="btn">Enviar</button>
         </form>
@@ -109,5 +108,7 @@
             <p>&copy2025 ZonaBike. Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <script src="validaciones.js"></script>
 </body>
 </html>

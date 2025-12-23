@@ -31,20 +31,17 @@
         </div>
     </header>
 
-    <main class="login-registro">
-        <h1>Iniciar Sesión</h1>
-
-        <form id="loginForm" action="/login" method="POST">
-            <label for="email">Correo electrónico:</label>
+    <main class="contenedor">
+        <h1 class="titulo-categoria">Iniciar Sesión</h1>
+        <form id="login-form" action="/login" method="POST">
+            <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="password">Contraseña:</label>
+            <label for="password">Contraseña</label>
             <input type="password" id="password" name="password" required>
 
             <button type="submit" class="btn">Ingresar</button>
         </form>
-
-        <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
     </main>
 
 
