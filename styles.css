@@ -5,9 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 header {
     background: #111;
     color: #fff;
@@ -94,9 +92,7 @@ header {
     transform: scale(1.2);
 }
 
-/* =========================
-   HERO / VIDEO
-========================= */
+/* HERO / VIDEO */
 #titulo {
     position: relative;
     height: 85vh;
@@ -138,9 +134,7 @@ header {
     z-index: 1;
 }
 
-/* =========================
-   QUIÉNES SOMOS
-========================= */
+/* QUIÉNES SOMOS */
 #somos-rueda {
     padding: 60px 0;
     background: #f4f4f4;
@@ -166,9 +160,7 @@ header {
     max-width: 900px;
 }
 
-/* =========================
-   CATEGORÍAS
-========================= */
+/* CATEGORÍAS */
 #nuestras-bicicletas {
     padding: 60px 0;
     background: #f9f9f9;
@@ -220,9 +212,7 @@ header {
     font-weight: bold;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
     background: #111;
     color: #ccc;
@@ -325,6 +315,64 @@ footer a:hover {
     font-weight: bold;
     color: #4CAF50;
     margin: 10px 0;
+}
+
+/* PRODUCTO DETALLE */
+.producto-detalle {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.producto-detalle h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.producto-detalle .imagen-producto {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.producto-detalle .precio {
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.producto-detalle p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.producto-detalle .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.producto-detalle .btn:hover {
+    background: #43a047;
 }
 
 /* =========================
