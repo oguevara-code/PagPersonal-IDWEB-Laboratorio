@@ -296,6 +296,37 @@ footer a:hover {
     color: #aaa;
 }
 
+/* PRODUCTOS */
+.catalogo {
+    padding: 60px 5%;
+}
+
+.titulo-categoria {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.productos {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.producto {
+    text-align: center;
+    padding: 20px;
+}
+
+.producto img {
+    height: 200px;
+    object-fit: contain;
+}
+
+.precio {
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
 /* =========================
    RESPONSIVE BÁSICO
 ========================= */
