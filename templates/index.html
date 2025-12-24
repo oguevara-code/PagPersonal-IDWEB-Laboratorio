@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZonaBike</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <header>
         <div class="container header-flex">
             <p class="zonabike">ZonaBike</p>
             <nav id="menu">
-                <a href="index.html">Inicio</a>
-                <a href="montañeras.html">Montañeras</a>
-                <a href="ruta.html">Ruta</a>
-                <a href="urbanas.html">Urbanas</a>
-                <a href="niños.html">Niños</a>
-                <a href="cascos.html">Cascos</a>
-                <a href="indumentarias.html">Indumentarias</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="{{ url_for('index') }}">Inicio</a>
+                <a href="{{ url_for('montañeras') }}">Montañeras</a>
+                <a href="{{ url_for('ruta') }}">Ruta</a>
+                <a href="{{ url_for('urbanas') }}">Urbanas</a>
+                <a href="{{ url_for('niños') }}">Niños</a>
+                <a href="{{ url_for('cascos') }}">Cascos</a>
+                <a href="{{ url_for('indumentarias') }}">Indumentarias</a>
+                <a href="{{ url_for('contacto') }}">Contacto</a>
             </nav>
 
             <div class="acciones">
-                <a href="carrito.html" class="btn-icon">
-                    <img src="iconos/carrito.png" alt="Carrito">
+                <a href="{{ url_for('carrito') }}" class="btn-icon">
+                    <img src="{{ url_for('static', filename='img/iconos/carrito.png') }}" alt="Carrito">
                 </a>
-                <a href="login.html" class="btn">Iniciar Sesión</a>
-                <a href="registro.html" class="btn btn-outline">Registrarse</a>
+                <a href="{{ url_for('login') }}" class="btn">Iniciar Sesión</a>
+                <a href="{{ url_for('registro') }}" class="btn btn-outline">Registrarse</a>
             </div>
         </div>
     </header>
@@ -34,7 +34,7 @@
     <section id="titulo">
         <h1>Tu nueva bicicleta te espera</h1>
         <video autoplay muted loop>
-            <source src="/video-fondo/video-fondo.mp4" type="video/mp4">
+            <source src="{{ url_for('static', filename='video/video-fondo.mp4') }}" type="video/mp4">
         </video>
     </section>
 
@@ -57,32 +57,32 @@
     <section id="nuestras-bicicletas">
         <div class="contenedor">
             <a href="montañeras.html" class="item">
-                <img src="imagenes/montañera.jpg" alt="bicis montañeras" width="350px">
+                <img src="{{ url_for('static', filename='img/imagenes/montañera.jpg') }}" alt="bicis montañeras" width="350px">
                 <h3 class="texto-centro">Montañeras</h3>
             </a>
 
             <a href="ruta.html" class="item">
-                <img src="imagenes/ruta.jpg" alt="bicis de ruta" width="350px">
+                <img src="{{ url_for('static', filename='img/imagenes/ruta.jpg') }}" alt="bicis de ruta" width="350px">
                 <h3 class="texto-centro">Ruta</h3>
             </a>
 
             <a href="urbanas.html" class="item">
-                <img src="imagenes/urbana.jpg" alt="bicis urbanas" width="350px">
+                <img src="{{ url_for('static', filename='img/imagenes/urbana.jpg') }}" alt="bicis urbanas" width="350px">
                 <h3 class="texto-centro">Urbanas</h3>
             </a>
 
             <a href="Niños.html" class="item">
-                <img src="imagenes/Niños.jpg" alt="bicis para niños" width="350px">
+                <img src="{{ url_for('static', filename='img/imagenes/Niños.jpg') }}" alt="bicis para niños" width="350px">
                 <h3 class="texto-centro">Niños</h3>
             </a>
 
             <a href="cascos.html" class="item">
-                <img src="imagenes/cascos.jpg" alt="cascos" width="350px">
+                <img src="{{ url_for('static', filename='img/imagenes/cascos.jpg') }}" alt="cascos" width="350px">
                 <h3 class="texto-centro">Cascos</h3>
             </a>
 
             <a href="indumentarias.html" class="item">
-                <img src="imagenes/indumentarias.jpg" alt="indumentarias" width="350px">
+                <img src="{{ url_for('static', filename='img/imagenes/indumentarias.jpg') }}" alt="indumentarias" width="350px">
                 <h3 class="texto-centro">Indumentarias</h3>
             </a>
         </div>
@@ -99,14 +99,14 @@
         <div class="enlaces">
             <h4>Enlaces rápidos</h4>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="montañeras.html">Montañeras</a></li>
-                <li><a href="ruta.html">Ruta</a></li>
-                <li><a href="urbanas.html">Urbanas</a></li>
-                <li><a href="niños.html">Niños</a></li>
-                <li><a href="cascos.html">Cascos</a></li>
-                <li><a href="indumentarias.html">Indumentarias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('montañeras') }}">Montañeras</a></li>
+                <li><a href="{{ url_for('ruta') }}">Ruta</a></li>
+                <li><a href="{{ url_for('urbanas') }}">Urbanas</a></li>
+                <li><a href="{{ url_for('niños') }}">Niños</a></li>
+                <li><a href="{{ url_for('cascos') }}">Cascos</a></li>
+                <li><a href="{{ url_for('indumentarias') }}">Indumentarias</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
             </ul>
         </div>
 
@@ -114,17 +114,17 @@
             <h4>Contacto</h4>
 
             <div class="item-contacto">
-                <img src="iconos/correo.png" class="icono">
+                <img src="{{ url_for('static', filename='img/iconos/correo.png') }}" class="icono">
                 <span>guevaraomar540@gmail.com</span>
             </div>
 
             <div class="item-contacto">
-                <img src="iconos/telefono.png" class="icono">
+                <img src="{{ url_for('static', filename='img/iconos/telefono.png') }}" class="icono">
                 <span>+51 961 742 408</span>
             </div>
 
             <div class="item-contacto">
-                <img src="iconos/ubicacion.png" class="icono">
+                <img src="{{ url_for('static', filename='img/iconos/ubicacion.png') }}" class="icono">
                 <span>C.C. Siglo XX – ZonaBike, <br>Andrés Avelino Cáceres, Arequipa, Perú</span>
             </div>
         </div>
@@ -132,15 +132,15 @@
         <div class="redes">
             <h4>Redes Sociales</h4>
             <a href="" class="item-red">
-                <img src="iconos/Facebook 2.png" alt="Facebook" class="icono">
+                <img src="{{ url_for('static', filename='img/iconos/Facebook2.png') }}" alt="Facebook" class="icono">
                 <span>Facebook</span>
             </a>
             <a href="" class="item-red">
-                <img src="iconos/instagram 2.png" alt="Instagram" class="icono">
+                <img src="{{ url_for('static', filename='img/iconos/instagram2.png') }}" alt="Instagram" class="icono">
                 <span>Instagram</span>
             </a>
             <a href="" class="item-red">
-                <img src="iconos/tik-tok.png" alt="Tiktok" class="icono">
+                <img src="{{ url_for('static', filename='img/iconos/tik-tok.png') }}" alt="Tiktok" class="icono">
                 <span>Tiktok</span>
             </a>
         </div>
